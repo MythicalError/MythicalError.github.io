@@ -312,7 +312,7 @@ footer {
 
 .terminal-command {
     color: var(--terminal-text);
-    white-space: nowrap;
+        white-space: nowrap;
 }
 
 .terminal-cursor {
@@ -325,7 +325,6 @@ footer p {
     margin-top: 1rem;
 }
 
-/* Page transition animation */
 @keyframes pageTransition {
     from {
         opacity: 0;
@@ -337,7 +336,6 @@ footer p {
     }
 }
 
-/* Responsive Design */
 @media (min-width: 768px) {
     .links {
         grid-template-columns: repeat(2, 1fr);
@@ -369,5 +367,126 @@ footer p {
     
     .contact-links {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .links {
+        grid-template-columns: 1fr;
+    }
+    
+    .terminal {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .profile-image-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .navigation ul {
+        gap: 0.8rem;
+    }
+    
+    .navigation a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .terminal-body {
+        padding: 0.6rem;
+        overflow-x: auto;
+    }
+    
+    .terminal-text {
+        font-size: 0.8rem;
+    }
+    
+    .contact-info {
+        padding: 1rem;
+    }
+    
+    .contact-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .link-card {
+        padding: 0.8rem;
+    }
+    
+    .link-card i {
+        font-size: 1.3rem;
+        margin-right: 0.8rem;
+    }
+    
+    .link-card span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .profile-image-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .navigation ul {
+        gap: 0.5rem;
+    }
+    
+    .navigation a {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    .terminal-header {
+        padding: 0.2rem;
+    }
+    
+    .terminal-button {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .terminal-body {
+        overflow-x: hidden; 
+        white-space: nowrap;
+        width: 100%;
+    }
+    
+    .terminal-text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+    
+    .terminal {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
