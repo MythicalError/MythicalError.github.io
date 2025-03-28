@@ -253,6 +253,7 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+
 .terminal {
     background-color: var(--terminal-bg);
     border-radius: 8px;
@@ -260,7 +261,7 @@ footer {
     margin: 0 auto 1rem auto;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: none; 
+    transition: none;
 }
 
 .terminal-header {
@@ -296,7 +297,7 @@ footer {
 .terminal-text {
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .terminal-user {
