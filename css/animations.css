@@ -26,6 +26,11 @@
     animation: fadeIn 0.5s ease-out forwards;
 }
 
+/* Page load animation */
+.page-loaded .container {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
 /* Background ambient glow animation */
 @keyframes ambientGlow {
     0% {
@@ -93,6 +98,22 @@ body::after {
 
 .profile-image-container {
     animation: float 4s ease-in-out infinite;
+}
+
+/* Page change animation */
+@keyframes pageChange {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: pageChange 0.5s ease-out;
 }
 
 /* Custom scrollbar */

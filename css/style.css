@@ -133,14 +133,12 @@ body {
 
 /* Content Sections */
 .content {
-    display: none;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s ease-out forwards;
     flex: 1;
 }
 
 .content.active {
-    display: block;
     opacity: 1;
 }
 
@@ -251,16 +249,18 @@ body {
 footer {
     margin-top: 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 .terminal {
     background-color: var(--terminal-bg);
     border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
+    width: 600px;
     margin: 0 auto 1rem auto;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: none; 
 }
 
 .terminal-header {
@@ -290,23 +290,28 @@ footer {
 
 .terminal-body {
     padding: 0.8rem;
+    white-space: nowrap;
 }
 
 .terminal-text {
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
+    white-space: nowrap; 
 }
 
 .terminal-user {
     color: var(--primary-color);
+    white-space: nowrap;
 }
 
 .terminal-location {
     color: var(--secondary-color);
+    white-space: nowrap;
 }
 
 .terminal-command {
     color: var(--terminal-text);
+    white-space: nowrap;
 }
 
 .terminal-cursor {
@@ -317,6 +322,18 @@ footer p {
     color: #666;
     font-size: 0.8rem;
     margin-top: 1rem;
+}
+
+/* Page transition animation */
+@keyframes pageTransition {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
